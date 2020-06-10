@@ -1,0 +1,295 @@
+.form {
+    background-color: #ededed;
+    width: 100%;
+    height: 100%;
+}
+.rating {
+    padding: 0;
+    border: none;
+}
+.rating__title {
+    padding-top: 37px;
+    color: #202326;
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 10px;
+}
+.rating__group {
+    position: relative;
+    width: 10em;
+    height: 2em;
+    background-image: url(../assets/star.svg);
+    background-size: 2em 1.9em;
+    background-repeat: repeat-x;
+    margin-bottom: 11px;
+}
+.rating__star {
+    font-size: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 2em;
+    height: 2em;
+    appearance: none;
+    -webkit-appearance: none;
+    background-size: 2em 1.9em;
+    background-repeat: repeat-x;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &:checked, &:hover {
+        background-image: url(../assets/star-active.svg);
+    }
+    &:hover ~ & {
+        background-image: url(../assets/star.svg);
+    }
+    &:nth-of-type(1) {
+        width: 2em;
+        z-index: 5;
+    }
+    &:nth-of-type(2) {
+        width: 4em;
+        z-index: 4;
+    }
+    &:nth-of-type(3) {
+        width: 6em;
+        z-index: 3;
+    }
+    &:nth-of-type(4) {
+        width: 8em;
+        z-index: 2;
+    }
+    &:nth-of-type(5) {
+        width: 10em;
+        z-index: 1;
+    }
+}
+.form__add {
+    color: #202326;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group {
+    position: relative;
+    flex: 30%;
+    margin-left: 30px;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:nth-child(4) {
+        margin-left: 0;
+    }
+}
+.form-group__label {
+    position: absolute;
+    top: 10px;
+    left: 21px;
+    color: #777777;
+    font-family: "Arial MT";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: .3s;
+}
+.form-group__input {
+    width: 100%;
+    background-color: #fff;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    transition: .3s;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: #222222;
+    font-family: "Arial MT";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    &:focus {
+        border-radius: 4px;
+        border: 1px solid #222222;
+    }
+}
+.form-group__input:focus ~ .form-group__label,
+.form-group__input:not(:placeholder-shown) ~ .form-group__label{
+    top: 1px;
+}
+.form-group__comment {
+    width: 100%;
+    resize: none;
+    margin-top: 20px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    transition: .3s;
+    color: #222222;
+    font-family: "Arial MT";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 15px;
+    padding-left: 20px;
+    margin-bottom: 18px;
+    &:focus {
+        border-radius: 4px;
+        border: 1px solid #222222;
+    }
+}
+.form-group__label-comment {
+    position: absolute;
+    top: 30px;
+    left: 21px;
+    color: #777777;
+    font-family: "Arial MT";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: .3s;
+}
+.form-group__comment:focus ~ .form-group__label-comment,
+.form-group__comment:not(:placeholder-shown) ~ .form-group__label-comment{
+    top: 20px;
+}
+.form-group__btn {
+    width: 100%;
+    margin-bottom: 40px;
+    .btn {
+        min-width: 226px;
+        height: 44px;
+        border-radius: 4px;
+        background-color: #0062ff;
+        border: 0;
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            opacity: .8;
+        }
+    }    
+}
+.form-select {
+    flex: 30%;
+    color: #222222;
+    font-family: "Arial MT";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    position: relative;
+}
+.form-select__list {
+    padding: 0;
+    margin: 10px 21px 5px 15px;
+    list-style: none;
+    background-color: #ffffff;
+    width: 220px;
+    height: 178px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #e6e6e6;
+    position: absolute;
+    z-index: 1;
+    right: -20px;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+}
+.form-select__option {
+    margin-left: 30px;
+    display: block;
+    color: #777777;
+    width: 220px;
+    height: 42px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    padding-top: 9px;
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+    &:after {
+        content: '';
+        background-image: url(../assets/select.svg);
+        position: absolute;
+        top: 19px;
+        right: 15px;
+        width: 10px;
+        height: 6px;
+        transition: .3s;
+        transform: rotate(180deg);
+        transform-origin: center;
+    }    
+}
+
+.form-select__item {    
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 44px;
+    transition: .3s;
+    width: 100%;
+    padding-left: 18px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #0062ff;
+        display: none;
+    }    
+    &:hover {
+        background-color: #ededed;
+        &:before {
+            display: block;
+        }
+    }
+}
+.form-select__option.active {
+    border: 1px solid #222222;
+    &:after {
+        transform: rotate(0deg);
+    }
+}
+.form-select.active .form-select__list {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 737px) {
+    .rating__title {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    .rating__group {
+        margin-bottom: 0;
+    }
+    .form__add {
+        font-size: 16px;
+    }
+    .form-group {
+        margin-left: 0;
+        flex: 100%;
+        margin-bottom: 14px;
+    }
+    .form-select__option {
+        margin: 0;
+        width: 100%;
+    }
+    .form-select__list {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+}

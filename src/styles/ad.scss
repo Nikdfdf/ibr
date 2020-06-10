@@ -1,0 +1,52 @@
+.ad {
+    background-color: #ededed;
+    height: 300px;
+    margin-bottom: 52px;
+}
+.ad__container {
+    max-width: 610px;
+    margin: 0 auto;
+}
+.ad__link {
+    display: inline-block;
+    margin-top: 30px;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 16px;
+}
+.link {
+    color: #0062ff;
+    text-decoration: none;
+    position: relative;
+    &:before {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: #0062ff;
+        opacity: 0.5;
+        position: absolute;
+        bottom: -2px;
+    }
+}
+.ad__img {
+    background-image: url(../assets/ad.png);
+    max-width: 610px;
+    height: 200px;
+}
+
+@media (max-width: 320px) {
+    .ad {
+        height: auto;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    .ad__link {
+        margin-top: 20px;
+    }
+    .ad__img {
+        background-image: url(../assets/ad-mob.png);
+        background-repeat: no-repeat;
+    }
+}

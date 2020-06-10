@@ -1,0 +1,53 @@
+.title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 27px;
+}
+.wrapper {
+    max-width: 700px;
+    height: 100%;
+    margin-right: 0;
+    margin-left: 65px;
+    margin-bottom: 57px;    
+}
+.content__descrition {
+    font-family: "Segoe UI";
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    &:before {
+        content: url(../assets/quotation-mark.svg);
+        position: absolute;
+        left: -62px;
+        top: -2px;
+    }   
+}
+.content__author {
+    display: inline-block;
+    margin-top: 27px;
+    color: #777777;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .content__descrition {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .content__author {
+        margin-top: 15px;
+    }
+    .wrapper {
+        margin-bottom: 37px;
+    }
+}

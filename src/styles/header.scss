@@ -1,0 +1,223 @@
+$colorBlue: #0062ff;
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Consolas', serif;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+}
+.container {
+    max-width: 740px;
+    margin: 0 auto;
+}
+.header__title {
+    color: $colorBlue;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 70px;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 145px;
+        height: 1px;
+        background-color: #454a52;
+        opacity: 0.2;
+        right: 0px;
+        top: 50%;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 145px;
+        height: 1px;
+        background-color: #454a52;
+        opacity: 0.2;
+        left: 0px;
+        top: 50%;
+    }
+}
+.header-img {
+    width: 738px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+    &:before {
+        content: '';
+        border: 8px solid transparent; 
+        border-bottom: 8px solid #fff;
+        position: absolute;
+        bottom: 0;
+        left: 80px;
+    }
+}
+.img__date {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 120px;
+    height: 100px;
+    border: 1px solid #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 11px;
+    left: 20px;
+}
+.date {
+    color: #202326;
+    font-family: Merriweather;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 24px;
+}
+.number {
+    &:after {
+        content: '';
+        position: absolute;
+        border: 3px solid transparent; 
+        border-left: 3px solid #202326;;
+        top: 34px;
+        right: 27px;
+    }
+}
+.month {
+    font-size: 21px;
+}
+.header__subtitle {
+    color: #202326;
+    font-family: "Arial - Italic MT";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    font-style: italic;
+    position: relative;
+    margin-bottom: 108px;
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #454a52;
+        opacity: 0.2;
+        position: absolute;
+        top: 74px;
+        left: 0;
+    }
+}
+
+@media (max-width: 737px) {
+    body {
+        margin: 20px;
+    }
+    .header__title {
+        &:before {
+            width: 35px;
+            right: 80px;
+        }
+        &:after {
+            width: 35px;
+            left: 80px;
+        }
+    }
+    .header-img {
+        margin: 15px auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 600px;
+        height: 315px;
+       &:before {
+           display: none;
+       }
+       &::-webkit-scrollbar {
+            height: 4px;
+            border-radius: 2px;
+            background-color: #e6e6e6;
+       }
+       &::-webkit-scrollbar-track {
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: #e6e6e6;
+       }
+       &::-webkit-scrollbar-thumb {
+            width: 80px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: #0062ff;
+       }
+   }
+   .header__subtitle {
+       text-align: center;
+   }
+}
+
+@media (max-width: 685px) {
+    .header__title {
+        &::before {
+            right: 50px;
+        }
+        &::after {
+            left: 50px;
+        }
+    }
+    .header-img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__title {
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+@media (max-width: 460px) {
+    .header-img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header__title {
+        font-size: 24px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        &:before {
+            display: block;
+            width: 21px;
+            right: 0;
+        }
+        &:after {
+            display: block;
+            width: 21px;
+            left: 0;
+        }
+    }
+   .wrap {
+       display: flex;
+       flex-direction: column;
+   }
+   .header__subtitle {
+       order: -1;
+       margin-bottom: 30px;
+       text-align: left;
+       &:after {
+           display: none;
+       }
+   }
+   .header-img {
+        width: 298px;
+   }
+   .img__date {
+       left: 20px;
+   }
+}

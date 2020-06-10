@@ -1,0 +1,26 @@
+.conclusion {
+    margin-bottom: 73px;
+}
+.conclusion__title {
+    margin-bottom: 25px;
+}
+.conclusion__desc {
+    color: #202326;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+}
+@media (max-width: 320px) {
+    .conclusion {
+        margin-bottom: 40px;
+    }
+    .conclusion__title {
+        margin-bottom: 10px;
+    }
+    .conclusion__desc {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,106 @@
     <header class="header">
         <div class="container">
             <h1 class="header__title">Путь JavaScript</h1>
-            <div class="header-img">
-                <img class="img__books" src="./books.png" alt="">
-                <div class="img__date">
-                    <span class="date number">12</span>
-                    <span class="date month">апреля</span>
+            <div class="wrap">
+                <div class="header-img">
+                    <img class="img__books" src="https://via.placeholder.com/738x300" alt="Баннер книг">
+                    <div class="img__date">
+                        <span class="date number">12</span>
+                        <span class="date month">апреля</span>
+                    </div>
                 </div>
+                <div class="header__subtitle">Можно выделить три основных направления для прогресса JavaScript</div>
             </div>
-            <div class="header__subtitle">Можно выделить три основных направления для прогресса JavaScript</div>
-            
         </div>
     </header>
+    <section class="content">
+        <div class="container">
+            <h2 class="content__title title">Серверный JavaScript</h2>
+            <div class="wrapper">
+                <blockquote class="content__descrition">
+                    Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не важен.
+                </blockquote>
+                <cite class="content__author">— Р.Мартин</cite>
+            </div>           
+        </div>
+    </section>
+    <section class="ad">
+        <div class="ad__container">
+            <span class="ad__link">Реклама на <a class="link" href="blabla.com">blabla.com</a></span>
+            <div class="ad__img"></div>
+        </div>
+    </section>
+    <section class="conclusion">
+        <div class="container">
+            <h3 class="conclusion__title title">Заключение</h3>
+            <p class="conclusion__desc">Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект. Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм
+            </p>
+        </div>
+    </section>
+    <form class="form">
+        <div class="container">
+            <fieldset class="rating">
+                <legend class="rating__title">Оцените статью</legend>
+                <div class="rating__group">
+                    <input class="rating__star" type="radio" name="star" value="1" aria-label="Плохо" checked>
+                    <input class="rating__star" type="radio" name="star" value="2" aria-label="Так себе">
+                    <input class="rating__star" type="radio" name="star" value="3" aria-label="Норм">
+                    <input class="rating__star" type="radio" name="star" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="star" value="5" aria-label="Отлично">
+                </div>
+            </fieldset>
+            <p class="form__add">Добавить комментарий к книге</p>
+            <div class="flex-wrap">
+                <div class="form-group">
+                    <input class="form-group__input" value="Александр" type="text" placeholder=" ">
+                    <label class="form-group__label">Имя</label>
+                </div>
+                <div class="form-group">
+                    <input class="form-group__input" type="email" placeholder=" ">
+                    <label class="form-group__label">E-mail</label>
+                </div>
+                <div class="form-select">
+                    <span class="form-select__option">Выберите книгу</span>
+                    <ul class="form-select__list">
+                        <li class="form-select__item">JavaScript ниндзя</li>
+                        <li class="form-select__item">Pragmatic Guide to JavaScript</li>
+                        <li class="form-select__item">Pro JavaScript Techniques</li>
+                        <li class="form-select__item">Выразительный JavaScript</li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-group__comment" placeholder=" "></textarea>
+                    <label class="form-group__label-comment">Ваш отзыв</label>
+                </div>
+                <div class="form-group__btn">
+                    <button class="btn" type="submit">Отправить</button>
+                </div>                
+            </div>
+        </div>
+    </form>
+    <section class="posts">
+        <div class="container">
+            <h4 class="posts__title title">Похожие посты</h4>
+            <div class="slider-wrapper">
+                <figure class="post__item active">
+                    <img class="post__img" src="https://via.placeholder.com/280/0000FF/808080" alt="Первая книга">
+                    <figcaption class="post__subtitle">События жизненного цикла ReactJS</figcaption>
+                </figure>
+                <figure class="post__item">
+                    <img class="post__img" src="https://via.placeholder.com/280/FF000/808080" alt="Вторая книга">
+                    <figcaption class="post__subtitle">CSS Grids. Полное руководство</figcaption>
+                </figure>
+                <figure class="post__item"> 
+                    <img class="post__img" src="https://via.placeholder.com/280/FFF000/000000" alt="Третья книга">
+                    <figcaption class="post__subtitle">Асинхронность в JavaScript</figcaption>
+                </figure>                    
+            </div>
+            <div class="dots-wrapper">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
